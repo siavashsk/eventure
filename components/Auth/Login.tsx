@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const Signin = () => {
+const Login = () => {
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -152,7 +152,7 @@ const Signin = () => {
                       type="checkbox"
                       className="peer sr-only"
                     />
-                    <span className="border-gray-300 bg-gray-100 text-blue-600 dark:border-gray-600 dark:bg-gray-700 group mt-1 flex h-5 min-w-[20px] items-center justify-center rounded peer-checked:bg-primary">
+                    <span className="group mt-1 flex h-5 min-w-[20px] items-center justify-center rounded border-gray-300 bg-gray-100 text-blue-600 peer-checked:bg-primary dark:border-gray-600 dark:bg-gray-700">
                       <svg
                         className="opacity-0 peer-checked:group-[]:opacity-100"
                         width="10"
@@ -218,9 +218,9 @@ const Signin = () => {
           </motion.div>
         </div>
       </section>
-      {/* <!-- ===== SignIn Form End ===== --> */}
+      {/* <!-- ===== Login Form End ===== --> */}
     </>
   );
 };
 
-export default Signin;
+export default Login;

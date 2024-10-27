@@ -9,21 +9,21 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "Features",
+    title: "Join",
     newTab: false,
-    path: "/#features",
+    path: "/join",
   },
   {
     id: 2.1,
-    title: "Blog",
+    title: "Library",
     newTab: false,
-    path: "/blog",
+    path: "/library",
   },
   {
     id: 2.3,
-    title: "Docs",
+    title: "Events",
     newTab: false,
-    path: "/docs",
+    path: "/events",
   },
   {
     id: 3,

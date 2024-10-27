@@ -1,4 +1,4 @@
-import Signin from "@/components/Auth/Signin";
+import Login from "@/components/Auth/Login";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const SigninPage = () => {
+const LoginPage = () => {
   return (
     <>
-      <Signin />
+      <Login />
     </>
   );
 };
 
-export default SigninPage;
+export default LoginPage;
