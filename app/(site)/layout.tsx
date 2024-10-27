@@ -1,9 +1,9 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Lines from "@/components/Lines";
-import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Site/Footer";
+import Header from "@/components/Site/Header";
+import Lines from "@/components/Site/Lines";
+import ScrollToTop from "@/components/Site/ScrollToTop";
 import { ThemeProvider } from "next-themes";
 import { Roboto } from "next/font/google";
 import "../globals.css";

@@ -1,5 +1,5 @@
-import BlogData from "@/components/Blog/blogData";
-import BlogItem from "@/components/Blog/BlogItem";
+import BlogData from "@/components/Site/Blog/blogData";
+import BlogItem from "@/components/Site/Blog/BlogItem";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
