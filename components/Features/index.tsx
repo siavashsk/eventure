@@ -13,8 +13,8 @@ const Feature = () => {
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
-              title: "SOLID FEATURES",
-              subtitle: "Core Features of Solid",
+              title: "EVENTURE FEATURES",
+              subtitle: "Core Features of Eventure",
               description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
             convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
             ante in maximus.`,

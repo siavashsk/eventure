@@ -24,10 +24,11 @@ const Hero = () => {
               </h4>
 
               <p>
-                Eventure Pro - Packed with all the key integrations you need for
-                swift SaaS startup launch, including - Auth, Database, Sanity
-                Blog, Essential Components, Pages and More. Built-winth -
-                Next.js 13, React 18 and TypeScript.
+                Eventure Pro - is a premier learning resource for growth-focused
+                professionals. With a vast selection of topics, the platform
+                revolutionizes access to professional development, providing
+                unlimited access to seminars, courses, and expert talks—all with
+                a single monthly subscription.
               </p>
 
               <div className="mt-10">
