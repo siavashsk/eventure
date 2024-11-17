@@ -1,14 +1,12 @@
-import Sidebar from "@/components/Dashboard/Sidebar";
+"use client";
 import React from "react";
-import '../globals.css';
+import "../globals.css";
 import DashboardPage from "./page";
 
 const layout = () => {
   return (
     <div>
-      <Sidebar>
-        <DashboardPage />
-      </Sidebar>
+      <DashboardPage />
     </div>
   );
 };
