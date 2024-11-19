@@ -1,24 +1,26 @@
-import Image from "next/image";
 import { twMerge } from "tailwind-merge";
-import addIcon from "@/assets/icons/chips/Plus.svg"
-import checkIcon from "@/assets/icons/chips/Check.svg"
+import { ReactNode } from "react";
+import { BiCheck, BiMessageRoundedAdd } from "react-icons/bi";
 
-export function TagChip({ variant, className, add, children }) {
+interface ITagChip {
+  variant: "gray" | "surface";
+  className?: string;
+  add?: boolean;
+  children: ReactNode;
+}
+
+export function TagChip({ variant, className, add, children }: ITagChip) {
   return (
     <div
       className={twMerge(
-        `rounded-xl flex justify-around items-center p-2 w-32 ${
-          (variant == "gray" && "bg-primary-container") ||
-          (variant == "surface" && "bg-surface-light")
+        `flex w-32 items-center justify-around rounded-xl p-2 ${
+          (variant == "gray" && "bg-gray-400") ||
+          (variant == "surface" && "bg-slate-100")
         }`,
-        className
+        className,
       )}
     >
-      {add ? (
-        <Image src={addIcon} alt="add" width={20} />
-      ) : (
-        <Image src={checkIcon} alt="check" width={20} />
-      )}
+      {add ? <BiMessageRoundedAdd /> : <BiCheck />}
       {children}
     </div>
   );
