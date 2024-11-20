@@ -11,7 +11,7 @@ const Spinner: React.FC<SpinnerProps> = ({ label, className }) => {
     <div className={"flex items-center"}>
       <div
         className={twMerge(
-          "inline-flex h-6 w-6 animate-spin rounded-full border-2 border-indigo-500 border-t-transparent",
+          "inline-flex h-6 w-6 animate-spin rounded-full border-2 border-indigo-500 !border-t-transparent",
           className,
         )}
       ></div>
