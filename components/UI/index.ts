@@ -5,3 +5,5 @@ export { default as Checkbox } from "./Checkbox";
 export { default as Chip } from "./Chip";
 export { default as RadioButton } from "./Radio";
 export { default as Tooltip } from "./Tooltip";
+export { default as PageLoading } from "./Loading/PageLoading";
+export { default as Spinner } from "./Loading/Spinner";
