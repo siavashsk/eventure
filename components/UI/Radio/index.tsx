@@ -36,7 +36,7 @@ const Radio: React.FC<IRadio> = ({
       </label>
       {label && (
         <label
-          className="ml-2 cursor-pointer text-sm text-slate-600"
+          className="ml-2 cursor-pointer text-sm"
           htmlFor={id}
         >
           {label}

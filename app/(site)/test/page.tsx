@@ -1,23 +1,12 @@
 "use client";
-import { Toast } from "@/components/UI";
-import React, { useState } from "react";
+import { Chip } from "@/components/UI";
+import React from "react";
 
 const Test = () => {
-  const [showToast, setShowToast] = useState(true);
   return (
-    <div className="h-full w-full bg-slate-100">
-      <div className="mt-30">
-        {showToast && (
-          <Toast
-            message="This is a toast message!"
-            variant="info"
-            position="top-right"
-            duration={2000}
-            onClose={() => {
-              setShowToast(false);
-            }}
-          />
-        )}
+    <div className="h-[100vh] w-full">
+      <div className="mt-27 h-full w-full p-8">
+        <Chip profile>helloo w World</Chip>
       </div>
     </div>
   );

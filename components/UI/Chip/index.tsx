@@ -15,7 +15,7 @@ interface ChipProps {
   onRemove?: () => void;
 }
 
-const Chip: React.FC = ({
+const Chip: React.FC<ChipProps> = ({
   variant = "primary",
   className,
   children,
@@ -24,11 +24,11 @@ const Chip: React.FC = ({
   cross,
   add,
   onRemove,
-}: ChipProps) => {
+}) => {
   return (
     <div
       className={twMerge(
-        `flex items-center justify-around rounded-full p-2 ${
+        `inline-block rounded-full p-2 ${
           (variant === "gray" && "bg-gray-500 text-white") ||
           (variant === "primary" && "bg-indigo-500 text-white") ||
           (variant === "surface" && "bg-slate-100")
@@ -36,12 +36,14 @@ const Chip: React.FC = ({
         className,
       )}
     >
-      {location && !profile && <IoLocationSharp />}
-      {profile && !location && <BiUser />}
-      {add && <IoIosAdd />}
-      {!add && !location && !profile && !cross && <BiCheck />}
-      {children}
-      {cross && <IoClose className="cursor-pointer" onClick={onRemove} />}
+      <div className="flex items-center justify-between gap-2 px-2">
+        {location && !profile && <IoLocationSharp />}
+        {profile && !location && <BiUser />}
+        {add && <IoIosAdd size={23}/>}
+        {!add && !location && !profile && !cross && <BiCheck size={22} />}
+        {children}
+        {cross && <IoClose size={22} className="cursor-pointer" onClick={onRemove} />}
+      </div>
     </div>
   );
 };
