@@ -9,3 +9,4 @@ export { default as PageLoading } from "./Loading/PageLoading";
 export { default as Spinner } from "./Loading/Spinner";
 export { default as Radio } from "./Radio";
 export { default as Switch } from "./Switch";
+export { default as Toast } from "./Toast";

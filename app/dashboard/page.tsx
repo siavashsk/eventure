@@ -1,12 +1,8 @@
-import { Tooltip } from "@/components/UI";
+"use client";
 import React from "react";
 
 const DashboardPage = () => {
-  return (
-    <div className="">
-      <Tooltip variant="top">Hello world</Tooltip>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default DashboardPage;
