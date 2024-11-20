@@ -8,7 +8,7 @@ interface CheckboxProps
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Checkbox: React.FC<CheckboxProps> = ({
+const Checkbox: React.FC<CheckboxProps> = ({
   label,
   id = "checkbox",
   checked,
@@ -27,9 +27,9 @@ export const Checkbox: React.FC<CheckboxProps> = ({
           id={id}
           checked={checked}
           onChange={onChange}
-          className={`checked:border-indigo-500 checked:bg-indigo-500 checked:before:bg-indigo-500 border-primary-onContainer before:bg-primary-onContainer2 peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border transition-all before:absolute before:left-2/4 before:top-2/4 before:block before:h-12 before:w-12 before:-translate-x-2/4 
-          before:-translate-y-2/4 before:rounded-full before:opacity-0 
-          before:transition-opacity hover:before:opacity-10
+          className={`border-primary-onContainer before:bg-primary-onContainer2 peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border transition-all before:absolute before:left-2/4 before:top-2/4 before:block before:h-12 before:w-12 before:-translate-x-2/4 before:-translate-y-2/4 before:rounded-full before:opacity-0 
+          before:transition-opacity checked:border-indigo-500 checked:bg-indigo-500 
+          checked:before:bg-indigo-500 hover:before:opacity-10
           ${className || ""}`}
           {...rest}
         />
@@ -54,3 +54,5 @@ export const Checkbox: React.FC<CheckboxProps> = ({
     </div>
   );
 };
+
+export default Checkbox;

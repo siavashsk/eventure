@@ -9,7 +9,7 @@ interface ITooltip {
   variant: "top" | "bottom" | "left" | "right";
 }
 
-export function Tooltip({ children, content, variant }: ITooltip) {
+const Tooltip: React.FC = ({ children, content, variant }: ITooltip) => {
   return (
     <div id="tooltip" className="group relative cursor-pointer">
       <div className="mx-2">{children}</div>
@@ -52,10 +52,12 @@ export function Tooltip({ children, content, variant }: ITooltip) {
       ></span>
     </div>
   );
-}
+};
 
 Tooltip.propTypes = {
   variant: PropTypes.oneOf(["top", "bottom", "left", "right"]).isRequired,
   content: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
 };
+
+export default Tooltip;

@@ -3,7 +3,7 @@ interface IRadio {
   label?: string;
 }
 
-export function RadioButton({ name, label }: IRadio) {
+const RadioButton: React.FC = ({ name, label }: IRadio) => {
   return (
     <div className="inline-flex items-center">
       <label
@@ -35,4 +35,6 @@ export function RadioButton({ name, label }: IRadio) {
       </label>
     </div>
   );
-}
+};
+
+export default RadioButton;

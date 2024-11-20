@@ -15,7 +15,7 @@ interface ChipProps {
   onRemove?: () => void;
 }
 
-export function Chip({
+const Chip: React.FC = ({
   variant = "primary",
   className,
   children,
@@ -24,7 +24,7 @@ export function Chip({
   cross,
   add,
   onRemove,
-}: ChipProps) {
+}: ChipProps) => {
   return (
     <div
       className={twMerge(
@@ -44,4 +44,5 @@ export function Chip({
       {cross && <IoClose className="cursor-pointer" onClick={onRemove} />}
     </div>
   );
-}
+};
+export default Chip;
