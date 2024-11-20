@@ -1,40 +1,49 @@
+import React from "react";
+import { twMerge } from "tailwind-merge";
+
 interface IRadio {
   name?: string;
   label?: string;
+  value?: string;
+  checked?: boolean;
+  className?: string;
+  id: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const RadioButton: React.FC = ({ name, label }: IRadio) => {
+const Radio: React.FC<IRadio> = ({
+  name,
+  label,
+  value,
+  checked,
+  className,
+  id,
+  onChange,
+}) => {
   return (
-    <div className="inline-flex items-center">
-      <label
-        className="relative flex cursor-pointer items-center rounded-full p-3"
-        htmlFor="html"
-      >
+    <div className={twMerge("inline-flex items-center", className)}>
+      <label className="relative flex cursor-pointer items-center" htmlFor={id}>
         <input
           name={name}
           type="radio"
-          className="before:content[''] border-blue-gray-200 text-primary-main before:bg-blue-gray-500 checked:border-primary-main checked:before:bg-primary-main peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border transition-all before:absolute before:left-2/4 before:top-2/4 before:block before:h-12 before:w-12 before:-translate-x-2/4 before:-translate-y-2/4 before:rounded-full before:opacity-0 before:transition-opacity hover:before:opacity-10"
-          id="html"
+          value={value}
+          checked={checked}
+          onChange={onChange}
+          className="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 transition-all checked:border-slate-400"
+          id={id}
         />
-        <span className="text-primary-main pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 opacity-0 transition-opacity peer-checked:opacity-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-3.5 w-3.5"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-          >
-            <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
-          </svg>
-        </span>
+        <span className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-indigo-500 opacity-0 transition-opacity duration-200 peer-checked:opacity-100"></span>
       </label>
-      <label
-        className="text-primary-onContainer2 mt-px cursor-pointer select-none font-light"
-        htmlFor="html"
-      >
-        {label}
-      </label>
+      {label && (
+        <label
+          className="ml-2 cursor-pointer text-sm text-slate-600"
+          htmlFor={id}
+        >
+          {label}
+        </label>
+      )}
     </div>
   );
 };
 
-export default RadioButton;
+export default Radio;
