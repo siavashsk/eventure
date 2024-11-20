@@ -1,13 +1,8 @@
-import { Radio } from "@/components/UI";
+import { Switch } from "@/components/UI";
 import React from "react";
 
 const DashboardPage = () => {
-  return (
-    <div className="">
-      <Radio id="genter" label="male" />
-      <Radio id="genter" label="female" />
-    </div>
-  );
+  return <div className=""></div>;
 };
 
 export default DashboardPage;
