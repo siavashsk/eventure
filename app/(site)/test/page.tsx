@@ -1,64 +1,36 @@
 "use client";
-import { Timeline } from "@/components/UI";
-import React from "react";
-
-import { FaBell, FaBoxOpen, FaCheckCircle } from "react-icons/fa";
+import { Tabs } from "@/components/UI";
+import React, { useState } from "react";
+import { FaGear, FaUser } from "react-icons/fa6";
+import { RxDashboard } from "react-icons/rx";
 
 const Test = () => {
-  const timelineItems = [
-    {
-      icon: FaBell,
-      iconBgColor: "bg-gray-900/10",
-      iconTextColor: "text-gray-900",
-      title: "$2400, Design changes",
-      description: "22 DEC 7:20 PM",
-      date: "22 DEC 2023",
-    },
-    {
-      icon: FaBoxOpen,
-      iconBgColor: "bg-red-500/10",
-      iconTextColor: "text-red-500",
-      title: "New order #1832412",
-      description: "21 DEC 11 PM",
-      date: "21 DEC 2023",
-    },
-    {
-      icon: FaCheckCircle,
-      iconBgColor: "bg-green-500/10",
-      iconTextColor: "text-green-500",
-      title: "Payment completed for order #4395133",
-      description: "20 DEC 2:20 AM",
-      date: "20 DEC 2023",
-    },
-    {
-      icon: FaBell,
-      iconBgColor: "bg-gray-900/10",
-      iconTextColor: "text-gray-900",
-      title: "$2400, Design changes",
-      description: "22 DEC 7:20 PM",
-      date: "22 DEC 2023",
-    },
-    {
-      icon: FaBoxOpen,
-      iconBgColor: "bg-red-500/10",
-      iconTextColor: "text-red-500",
-      title: "New order #1832412",
-      description: "21 DEC 11 PM",
-      date: "21 DEC 2023",
-    },
-    {
-      icon: FaCheckCircle,
-      iconBgColor: "bg-green-500/10",
-      iconTextColor: "text-green-500",
-      title: "Payment completed for order #4395133",
-      description: "20 DEC 2:20 AM",
-      date: "20 DEC 2023",
-    },
+  const [activeTab, setActiveTab] = useState("dashboard");
+  const tabs = [
+    { id: "dashboard", label: "Dashboard", icon: <RxDashboard /> },
+    { id: "profile", label: "Profile", icon: <FaUser /> },
+    { id: "settings", label: "Settings", icon: <FaGear /> },
   ];
+
+  const handleTabClick = (id: string) => {
+    setActiveTab(id);
+  };
+
   return (
     <div className="h-[100vh] w-full">
       <div className="mt-27 h-full w-full p-8">
-        <Timeline items={timelineItems} />
+        <div className="p-4">
+          <Tabs
+            tabs={tabs.map((tab) => ({
+              ...tab,
+              isActive: tab.id === activeTab,
+            }))}
+            onTabClick={handleTabClick}
+          />
+          <div className="mt-4">
+            <p>Active Tab: {activeTab}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
