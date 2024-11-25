@@ -10,3 +10,4 @@ export { default as Spinner } from "./Loading/Spinner";
 export { default as Radio } from "./Radio";
 export { default as Switch } from "./Switch";
 export { default as Toast } from "./Toast";
+export { default as Timeline } from "./Timeline";
