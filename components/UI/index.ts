@@ -15,3 +15,4 @@ export { default as Tabs } from "./Tabs";
 export { default as Skeleton } from "./Skeleton";
 export { default as Sidebar } from "./Sidebar";
 export { default as Progressbar } from "./Progressbar";
+export { default as Popover } from "./Popover";
