@@ -31,17 +31,17 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
     <div className="relative block w-full">
       <div
         role="button"
-        className="active:text-whiteflex w-full items-center rounded-lg p-0 text-start leading-tight outline-none transition-all hover:bg-opacity-80 focus:bg-opacity-80 active:bg-primary active:text-white"
+        className="active:text-whiteflex w-full items-center rounded-lg p-0 text-start leading-tight outline-none transition-all  active:bg-primary active:text-white"
         onClick={toggleCollapse}
       >
         <button
           type="button"
-          className="font-sans flex w-full select-none items-center justify-between rounded-md p-3 text-left text-xl font-semibold leading-snug antialiased transition-colors hover:bg-titlebgdark"
+          className="font-sans flex w-full select-none items-center justify-between rounded-md p-3 text-left text-xl font-semibold leading-snug antialiased transition-colors hover:bg-zinc-700"
         >
-          <div className="mr-4 grid place-items-center text-black dark:text-white">
+          <div className="mr-4 grid place-items-center text-white">
             {icon}
           </div>
-          <p className="font-sans mr-auto block text-base font-normal leading-relaxed text-black antialiased dark:text-white">
+          <p className="font-sans mr-auto block text-base font-normal leading-relaxed antialiased text-white">
             {title}
           </p>
           {collapsible && (
@@ -63,9 +63,9 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
                 <div
                   key={index}
                   role="button"
-                  className="flex w-full items-center rounded-lg p-3 text-start leading-tight text-white outline-none transition-all hover:bg-titlebgdark hover:bg-opacity-80 focus:bg-opacity-80 active:bg-opacity-80 pl-8"
+                  className="flex w-full items-center rounded-lg p-3 pl-8 text-start leading-tight text-white outline-none transition-all hover:bg-zinc-700 active:bg-opacity-80"
                 >
-                  <div className="mr-4 grid place-items-center text-black dark:text-white">
+                  <div className="mr-4 grid place-items-center text-white">
                     {icon}
                   </div>
                   <p className="font-sans mr-auto block text-base font-normal leading-relaxed text-black antialiased dark:text-white">
@@ -83,14 +83,14 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
 
 const Sidebar: React.FC<SidebarProps> = () => {
   return (
-    <div className="shadow-blue-gray-900/5 relative flex h-full w-full max-w-[20rem] flex-col rounded-xl bg-slate-300 bg-clip-border p-4 text-gray-700 shadow-xl dark:bg-blacksection">
+    <div className="shadow-blue-gray-900/5 g-clip-border relative flex h-full w-full max-w-[20rem] flex-col rounded-xl bg-blacksection p-4 text-gray-700 shadow-xl">
       <div className="mb-2 flex items-center gap-4 p-4">
         <img
           src="https://docs.material-tailwind.com/img/logo-ct-dark.png"
           alt="brand"
           className="h-8 w-8"
         />
-        <h5 className="font-sans block text-xl font-semibold leading-snug tracking-normal text-black antialiased dark:text-white">
+        <h5 className="font-sans block text-xl font-semibold leading-snug tracking-normal antialiased text-white">
           Sidebar
         </h5>
       </div>
