@@ -12,3 +12,4 @@ export { default as Switch } from "./Switch";
 export { default as Toast } from "./Toast";
 export { default as Timeline } from "./Timeline";
 export { default as Tabs } from "./Tabs";
+export { default as Skeleton } from "./Skeleton";
