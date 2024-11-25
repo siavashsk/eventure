@@ -38,10 +38,8 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
           type="button"
           className="font-sans flex w-full select-none items-center justify-between rounded-md p-3 text-left text-xl font-semibold leading-snug antialiased transition-colors hover:bg-zinc-700"
         >
-          <div className="mr-4 grid place-items-center text-white">
-            {icon}
-          </div>
-          <p className="font-sans mr-auto block text-base font-normal leading-relaxed antialiased text-white">
+          <div className="mr-4 grid place-items-center text-white">{icon}</div>
+          <p className="font-sans mr-auto block text-base font-normal leading-relaxed text-white antialiased">
             {title}
           </p>
           {collapsible && (
@@ -90,7 +88,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
           alt="brand"
           className="h-8 w-8"
         />
-        <h5 className="font-sans block text-xl font-semibold leading-snug tracking-normal antialiased text-white">
+        <h5 className="font-sans block text-xl font-semibold leading-snug tracking-normal text-white antialiased">
           Sidebar
         </h5>
       </div>
