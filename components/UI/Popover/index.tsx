@@ -31,7 +31,7 @@ const Popover: React.FC<PopoverProps> = ({
 
       {isVisible && (
         <div
-          className={`font-sans shadow-blue-gray-500/10 absolute mt-2 w-max whitespace-normal break-words rounded-lg bg-stroke p-4 text-sm font-normal text-titlebgdark shadow-lg focus:outline-none dark:bg-blacksection dark:text-white ${popoverClassName}`}
+          className={`font-sans shadow-blue-gray-500/10 absolute bottom-8 w-max whitespace-normal break-words rounded-lg bg-stroke p-4 text-sm font-normal text-titlebgdark shadow-lg focus:outline-none dark:bg-blacksection dark:text-white ${popoverClassName}`}
         >
           {popoverContent}
         </div>
