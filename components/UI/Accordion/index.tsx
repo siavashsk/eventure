@@ -9,22 +9,22 @@ const AccordionItem = ({
   toggleAccordion,
 }: any) => {
   return (
-    <div className="border-b border-slate-200">
+    <div className="border-b border-black dark:border-slate-200">
       <button
         onClick={() => toggleAccordion(index)}
-        className="flex w-full items-center justify-between py-5 text-white"
+        className="flex w-full items-center justify-between py-5 text-black dark:text-white"
       >
         <span>{title}</span>
         <span
           className={`text-slate-800 transition-transform duration-300 ${
-            isOpen ? "rotate-45" : ""
+            isOpen ? "rotate-180" : ""
           }`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
-            fill="currentColor"
-            className="h-4 w-4"
+            fill="#888"
+            className="h-6 w-6"
           >
             <path
               fillRule="evenodd"
@@ -39,7 +39,9 @@ const AccordionItem = ({
           isOpen ? "max-h-screen" : ""
         }`}
       >
-        <div className="pb-5 text-sm text-slate-500">{content}</div>
+        <div className="pb-5 text-sm text-zinc-700 dark:text-zinc-400">
+          {content}
+        </div>
       </div>
     </div>
   );
